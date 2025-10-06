@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inovasi Pembelajaran IPA menggunakan MPI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.6s ease;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: white;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: white;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 16px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(10%, 10%);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <div class="profile-img">📚</div>
+            <h1>Media Pembelajaran Interaktif</h1>
+            <p class="subtitle">Koleksi Karya Pembelajaran Digital IPA</p>
+        </div>
+
+        <div class="gallery">
+            <div class="card" onclick="window.open('https://kakek1945.github.io/zatdanperubahan')">
+                <div class="card-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    🎮
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Zat dan Perubahannya</div>
+                    <div class="card-description">Pembelajaran Zat dan Perubahannya dengan Menyenangkan menggunakan MPI pada Mata Pelajaran IPA Kelas VII</div>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.open('https://kakek1945.github.io/mpi-sistemgerak')">
+                <div class="card-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    🌍
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Sistem Gerak Manusia</div>
+                    <div class="card-description">MPI untuk materi Sistem Gerak Manusia</div>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.open('https://kakek1945.github.io/memilah-sampah')">
+                <div class="card-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    🔬
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Memilah Sampah</div>
+                    <div class="card-description">Belajar sambil bermain dengan topik memilah sampah yang benar</div>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.open('https://kakek1945.github.io/matematika-jumlah')">
+                <div class="card-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                    📖
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Matematika Latihan</div>
+                    <div class="card-description">Pembelajaran ulang untuk siswa yang belum mampu menghitunfg dasar dengan Matematika</div>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.open('https://kakek1945.github.io/mpi-tatasurya')">
+                <div class="card-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    🎨
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Tata Surya Planetarium</div>
+                    <div class="card-description">Planetarium Sederhana bagi siswa untuk belajar Tata Surya</div>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.open('https://kakek1945.github.io/vlabkalor')">
+                <div class="card-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                    💻
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Virtual Lab Suhu dan Kalor</div>
+                    <div class="card-description">Praktek Digital tentang Suhu dan Kalor</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
